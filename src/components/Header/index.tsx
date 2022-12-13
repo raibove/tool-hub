@@ -1,11 +1,13 @@
+import { MouseEvent } from 'react';
 import { Link } from "react-router-dom";
 import { useAuth } from "@pangeacyber/react-auth";
 
 const Header = () => {
   const { authenticated, login, logout } = useAuth();
 
-  const handleLogout = () => {
-    logout(true);
+  const handleLogout = (e: MouseEvent) => {
+    e.preventDefault();
+    logout(false);
   }
 
   return (

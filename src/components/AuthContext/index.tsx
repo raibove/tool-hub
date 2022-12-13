@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 import { useAuth } from "@pangeacyber/react-auth";
@@ -9,9 +9,8 @@ import Footer from "@components/Footer";
 
 import Home from "@features/Home";
 import Profile from "@features/Profile";
-import About from "@features/About";
 
-const Layout = () => {
+const AuthContext = () => {
   const { authenticated, loading, error } = useAuth();
   const navigate = useNavigate();
 
@@ -19,12 +18,12 @@ const Layout = () => {
     if (!loading && !error && !authenticated) {
       navigate("/", { replace: true });
     }
-  }, [error, authenticated]);
+  }, [navigate, error, authenticated, loading]);
 
   if (loading) {
     return (<Status message="Loading" />); 
   } else if (error) {
-    return (<Status message="Error" />);
+    return (<Status message={error} />);
   }
 
   return (
@@ -34,7 +33,6 @@ const Layout = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/about" element={<About />} />
         </Routes>
       </div>
       <Footer />
@@ -42,4 +40,4 @@ const Layout = () => {
   );
 }
 
-export default Layout;
+export default AuthContext;

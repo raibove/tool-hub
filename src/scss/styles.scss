@@ -4,6 +4,8 @@ $primary-color: #551B76;
 $text-primary-color: #23315A;
 $text-secondary-color: #727A92;
 $text-contrast-color: #FFF;
+$success-color: #3A8D11;
+$warn-color: #FF9800;
 $button-border-radius: 4px;
 
 body {
@@ -45,6 +47,14 @@ body {
       font-size: 24px;
       font-weight: 600;
       color: $text-primary-color;
+    }
+
+    .success {
+      color: $success-color;
+    }
+
+    .warn {
+      color: $warn-color;
     }
   }
 
