@@ -2,19 +2,18 @@
 
 ## Setup
 
-### Clone this repo
+### Clone the repo and install dependencies
 
 ```
 % git clone git@github.com:pangeacyber/pangea-example-react-authn.git
-```
-
-### Install dependencies
-```
+% cd pangea-example-react-authn
 % yarn install
-% cp .env.template .env.local
 ```
 
 ### Configure environment variables
+```
+% cp .env.template .env.local
+```
 
 Set three values in .env.local
  - REACT_APP_CLIENT_TOKEN={PANGEA_TOKEN}
@@ -22,7 +21,7 @@ Set three values in .env.local
  - REACT_APP_PROVIDER_API="{AUTHN_API_URL}"
 
 
-### Start the dev server
+### Start the server
 ```
 % yarn start
 ```
