@@ -17,9 +17,9 @@
 ### Configure environment variables
 
 Set three values in .env.local
- - REACT_APP_CLIENT_TOKEN=${AUTHN-CLIENT-TOKEN}
- - REACT_APP_LOGIN_URL=${AUTHN-LOGIN-URL}
- - REACT_APP_PROVIDER_API=${AUTH-API-URL}
+ - REACT_APP_CLIENT_TOKEN={PANGEA_TOKEN}
+ - REACT_APP_LOGIN_URL="{AUTHN_LOGIN_URL}"
+ - REACT_APP_PROVIDER_API="{AUTHN_API_URL}"
 
 
 ### Start the dev server
