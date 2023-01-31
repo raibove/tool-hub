@@ -1581,10 +1581,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@pangeacyber/react-auth@^0.0.1-beta.8":
-  version "0.0.1-beta.8"
-  resolved "https://registry.yarnpkg.com/@pangeacyber/react-auth/-/react-auth-0.0.1-beta.8.tgz#4204d69cb141316377897dbd4b478708943758cf"
-  integrity sha512-iCGTHp1vLiYXrfUPXqaM6wXiMeU9bKfecx4nUkJQmS4TsUsdwLf6fHdVsc33dPOHup/OcdAdMlRKiUR6Ftcb+A==
+"@pangeacyber/react-auth@^0.0.1-beta.9":
+  version "0.0.1-beta.9"
+  resolved "https://registry.yarnpkg.com/@pangeacyber/react-auth/-/react-auth-0.0.1-beta.9.tgz#b0990a80f22a8e736ddb04a1bbd23c9eab165a46"
+  integrity sha512-jRF1WapBH/qt0RncHHaVwg2mYzE1ODRHgpd6Gb3lNFpsZbxYCb8JvZRlOQdkSGqfRJQg5x0XfLyRczj/vjWIXw==
   dependencies:
     "@types/randombytes" "^2.0.0"
     axios "^1.1.3"
