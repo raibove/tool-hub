@@ -1,6 +1,6 @@
 {
   "short_name": "AuthN Demo",
-  "name": "Pangea React AuthN Demo",
+  "name": "Pangea React Hosted AuthN Demo",
   "icons": [
     {
       "src": "favicon.ico",

@@ -1,8 +1,7 @@
-import React from 'react';
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AuthProvider, AppState } from "@pangeacyber/react-auth";
 
-import AuthContext from "@src/components/AuthContext"
+import Router from "@src/components/Router";
 import './scss/styles.scss';
 
 const LOGIN_URL = process.env.REACT_APP_LOGIN_URL || "";
@@ -12,9 +11,8 @@ const PROVIDER_API = process.env.REACT_APP_PROVIDER_API || "";
 const App = () => {
   const navigate = useNavigate();
 
-  const handleLogin = (appData: AppState) => {
-    const redirectUrl = new URL(appData.returnPath)
-    navigate(redirectUrl.pathname);
+  const handleLogin = (appData: AppState) => {    
+    navigate(appData.returnPath);
   }
 
   return (
@@ -26,7 +24,7 @@ const App = () => {
       onLogin={handleLogin}
       loginUrl={LOGIN_URL}
     >
-      <AuthContext />
+      <Router />
     </AuthProvider>
   );
 };

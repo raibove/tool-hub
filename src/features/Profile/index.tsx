@@ -1,15 +1,16 @@
-import { getSessionData } from "@pangeacyber/react-auth";
+import { useAuth } from "@pangeacyber/react-auth";
 
 const Profile = () => {
-  const sessionData = getSessionData();
+  const { user } = useAuth();
 
   return (
     <div className="profile">
       <h1>Profile</h1>
-      <div>Identity: {sessionData.identity}</div>
-      <div>First Name: {sessionData.profile?.first_name}</div>
-      <div>Last Name: {sessionData.profile?.last_name}</div>
-      <div>Email: {sessionData.email}</div>
+      <div>Identity: {user?.identity}</div>
+      <div>Email: {user?.email}</div>
+      <div>First Name: {user?.profile?.first_name}</div>
+      <div>Last Name: {user?.profile?.last_name}</div>
+      <div>Phone: {user?.profile?.phone}</div>
     </div>
   );
 }

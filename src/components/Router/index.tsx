@@ -10,13 +10,14 @@ import Footer from "@components/Footer";
 import Home from "@features/Home";
 import Profile from "@features/Profile";
 
-const AuthContext = () => {
+const Router = () => {
   const { authenticated, loading, error } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
     if (!loading && !error && !authenticated) {
-      navigate("/", { replace: true });
+      const redirectPath = `/${window.location.search}`;
+      navigate(redirectPath);
     }
   }, [navigate, error, authenticated, loading]);
 
@@ -25,7 +26,7 @@ const AuthContext = () => {
   } else if (error) {
     return (<Status message={error} />);
   }
-
+  
   return (
     <div className="app">
       <Header />
@@ -40,4 +41,4 @@ const AuthContext = () => {
   );
 }
 
-export default AuthContext;
+export default Router;
