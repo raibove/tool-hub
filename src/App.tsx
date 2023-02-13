@@ -19,7 +19,7 @@ const App = () => {
     <AuthProvider
       config={{
         domain: PROVIDER_API,
-        clientToken: CLIENT_TOKEN,
+        token: CLIENT_TOKEN,
       }}
       onLogin={handleLogin}
       loginUrl={LOGIN_URL}
