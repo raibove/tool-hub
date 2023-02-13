@@ -1581,10 +1581,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@pangeacyber/react-auth@^0.0.1-beta.9":
-  version "0.0.1-beta.9"
-  resolved "https://registry.yarnpkg.com/@pangeacyber/react-auth/-/react-auth-0.0.1-beta.9.tgz#b0990a80f22a8e736ddb04a1bbd23c9eab165a46"
-  integrity sha512-jRF1WapBH/qt0RncHHaVwg2mYzE1ODRHgpd6Gb3lNFpsZbxYCb8JvZRlOQdkSGqfRJQg5x0XfLyRczj/vjWIXw==
+"@pangeacyber/react-auth@^0.0.2-beta.1":
+  version "0.0.2-beta.1"
+  resolved "https://registry.yarnpkg.com/@pangeacyber/react-auth/-/react-auth-0.0.2-beta.1.tgz#9bea150f6af0509ae040f22172e62a8c2033d1a2"
+  integrity sha512-05zKidb1o1GeKaC96EPoLmufHSYKrGiraUfp1t/Ot37RXd/zlyJVqLCzZvzlgOZNw0dntmC3w8nHvF0LN57PHQ==
   dependencies:
     "@types/randombytes" "^2.0.0"
     axios "^1.1.3"
@@ -2735,9 +2735,9 @@ axe-core@^4.6.2:
   integrity sha512-/BQzOX780JhsxDnPpH4ZiyrJAzcd8AfzFPkv+89veFSr1rcMjuq2JDCwypKaPeB6ljHp9KjXhPpjgCvQlWYuqg==
 
 axios@^1.1.3:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.3.0.tgz#4cb0d72213989dec08d4b10129e42063bcb3dc78"
-  integrity sha512-oCye5nHhTypzkdLIvF9SaHfr8UAquqCn1KY3j8vsrjeol8yohAdGxIpRPbF1bOLsx33HOAatdfMX1yzsj2cHwg==
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.3.2.tgz#7ac517f0fa3ec46e0e636223fd973713a09c72b3"
+  integrity sha512-1M3O703bYqYuPhbHeya5bnhpYVsDDRyQSabNja04mZtboLNSuZ4YrltestrLXfHgmzua4TpUqRiVKbiQuo2epw==
   dependencies:
     follow-redirects "^1.15.0"
     form-data "^4.0.0"
