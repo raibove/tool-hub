@@ -49,12 +49,26 @@ body {
       color: $text-primary-color;
     }
 
+    h5 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 400;
+      color: $text-primary-color;
+    }
+
     .success {
       color: $success-color;
     }
 
     .warn {
       color: $warn-color;
+    }
+
+    .profile {
+      div {
+        word-break: break-all;
+        padding-bottom: 4px;
+      }
     }
   }
 
