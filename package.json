@@ -1,6 +1,6 @@
 {
   "name": "pangea-example-react-authn",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "dependencies": {
     "@pangeacyber/react-auth": "^0.0.5",

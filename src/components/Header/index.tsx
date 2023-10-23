@@ -8,7 +8,7 @@ const Header = () => {
   const handleLogout = (e: MouseEvent) => {
     e.preventDefault();
     logout();
-  };
+  }
 
   return (
     <div className="header">
