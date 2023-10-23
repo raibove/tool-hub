@@ -22,9 +22,9 @@ Create a project and enable the AuthN Service in the Pangea Console.
 > - Click `+ Redirect`
 > - Type `http://localhost:3000` in the URL input and click `Save`
 
-If the app is running on a different host or port number, the Redirect Setting will need to be updated to match.
+If the app is running on a different host or port number, the Redirect Setting will need to be updated to match your setup.
 
-Note the following fields, in the AuthN > Overview section, for use in the next step.
+Note the following fields, in the `AuthN > Overview` section, for use in the next step.
 - Client Token: this is the CLIENT_TOKEN
 - Domain: this is the PANGEA_DOMAIN
 - Hosted Login: this is the LOGIN_URL
