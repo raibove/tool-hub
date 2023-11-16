@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import './styles.css';
 
 interface Product {
-    product_url: string;
-    product_description: string;
+  product_url: string;
+  product_description: string;
 }
 
 const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Fetch all tools from the 'products' table
@@ -22,21 +24,30 @@ const ProductList = () => {
         }
       } catch (error: any) {
         console.error('Error:', error.message);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchProducts();
   }, []); 
-  
+
   return (
     <div>
-      <h2>All Products</h2>
-      {products.map((product, idx) => (
-        <div key={idx} className="product-card">
-          <h3>{product.product_url}</h3>
-          <p>{product.product_description}</p>
-        </div>
-      ))}
+      <h2>All Tools</h2>
+
+      {loading && <div className="loading-message">Loading...</div>}
+
+      <div className="product-list">
+        {products.map((product, idx) => (
+          <div key={idx} className="product-card" onClick={()=>
+            {window.open(product.product_url, '_blank')
+          }}>
+            <h3>{product.product_url}</h3>
+            <p>{product.product_description}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

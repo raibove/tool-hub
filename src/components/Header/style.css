@@ -1,0 +1,44 @@
+/* Header.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #F4E1EB;
+}
+
+.header img {
+    height: 80px;
+    width: 80px;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #F6008D;
+    color: #F4E1EB;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #f9e261;
+    color: #F6008D;
+    border: 1px solid #F6008D;
+}

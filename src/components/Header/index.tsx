@@ -1,7 +1,7 @@
 import { MouseEvent } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "@pangeacyber/react-auth";
-
+import './style.css'
 const Header = () => {
   const { authenticated, login, logout } = useAuth();
 
@@ -12,18 +12,18 @@ const Header = () => {
 
   return (
     <div className="header">
-      <img src="/pangea-logo.svg" alt="Pangea Logo" />
+      <img src="/logo.svg" alt="ToolHub Logo" style={{height: '80px', width: '80px'}}/>
       {authenticated && (
         <div className="nav">
-          <Link to="/">Home</Link>
-          <Link to="/profile">Profile</Link>
-          <Link to="/submit-tool">Submit Tool</Link>
+          <Link to="/" className="link">Home</Link>
+          <Link to="/profile" className="link">Profile</Link>
+          <Link to="/submit-tool" className="link">Submit Tool</Link>
         </div>
       )}
       {authenticated ? (
-        <button onClick={handleLogout}>Logout</button>
+        <button onClick={handleLogout} className="auth-button">Logout</button>
       ) : (
-        <button onClick={login}>Login</button>
+        <button onClick={login} className="auth-button">Login</button>
       )}
     </div>
   );

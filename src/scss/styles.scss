@@ -18,23 +18,9 @@ body {
 .app {
   display: flex;
   flex-direction: column;
-  max-width: 1200px;  
   height: 100vh;
   min-height: 600px;
   margin: 0 auto;
-
-  .header {
-    display: flex;
-    padding: 12px;
-    align-items: center;
-    justify-content: space-between;
-
-    .nav {
-      display: flex;
-      gap: 8px;
-    }
-  }
-
   .content {
     flex: 1;
     padding: 24px 12px;
@@ -81,19 +67,19 @@ body {
   }
 }
 
-button {
-  height: 38px;
-  padding: 0 20px;  
-  color: $text-contrast-color;
-  border: none;
-  background-color: $primary-color;
-  border-radius: $button-border-radius;
-  font-family: Kanit;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 38px;
-  cursor: pointer;
-}
+// button {
+//   height: 38px;
+//   padding: 0 20px;  
+//   color: $text-contrast-color;
+//   border: none;
+//   background-color: $primary-color;
+//   border-radius: $button-border-radius;
+//   font-family: Kanit;
+//   font-size: 14px;
+//   font-weight: 400;
+//   line-height: 38px;
+//   cursor: pointer;
+// }
 
 /*
   Status styles
