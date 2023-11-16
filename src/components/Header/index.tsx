@@ -17,6 +17,7 @@ const Header = () => {
         <div className="nav">
           <Link to="/">Home</Link>
           <Link to="/profile">Profile</Link>
+          <Link to="/submit-tool">Submit Tool</Link>
         </div>
       )}
       {authenticated ? (

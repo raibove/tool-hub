@@ -1,5 +1,6 @@
 import { useAuth } from "@pangeacyber/react-auth";
 import { getDateTime } from "../../utils";
+import ToolList from "@features/Tool/toolList";
 
 const Home = () => {
   const { authenticated, user } = useAuth();
@@ -25,6 +26,7 @@ const Home = () => {
           <div>{loginIP}</div>
         </div>
       }
+      <ToolList/>
     </div>
   );
 }

@@ -9,6 +9,7 @@ import Footer from "@components/Footer";
 import Status from "@components/Status";
 import Home from "@features/Home";
 import Profile from "@features/Profile";
+import Tool from "@features/Tool"
 
 const Router = () => {
   const { authenticated, loading, error, logout } = useAuth();
@@ -35,6 +36,7 @@ const Router = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/submit-tool" element={<Tool />} />
         </Routes>
       </div>
       <Footer />
