@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { createClient } from '@supabase/supabase-js';
-
-const supabase = createClient(process.env.REACT_APP_SUPABASE_URL || "", process.env.REACT_APP_SUPABASE_KEY || "")
 
 interface Product {
     product_url: string;
@@ -12,14 +9,16 @@ const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    // Fetch all products from the 'products' table
+    // Fetch all tools from the 'products' table
     const fetchProducts = async () => {
       try {
-        const { data, error } = await supabase.from('products').select('*');
-        if (error) {
-          console.error('Error fetching data:', error);
-        } else {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_BASE_URL}/get-all-tools`);
+        const data = await response.json();
+
+        if (response.ok) {
           setProducts(data);
+        } else {
+          console.error('Error fetching data:', data.error || 'Unknown error');
         }
       } catch (error: any) {
         console.error('Error:', error.message);
@@ -27,8 +26,8 @@ const ProductList = () => {
     };
 
     fetchProducts();
-  }, []); // Empty dependency array ensures the effect runs only once on component mount
-
+  }, []); 
+  
   return (
     <div>
       <h2>All Products</h2>

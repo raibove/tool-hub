@@ -18,7 +18,6 @@ const Tool = () => {
     const [errorMessage, setErrorMessage] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
 
-    // Function to handle form submission
     const handleSubmit = async (e: any) => {
         e.preventDefault();
 
@@ -28,8 +27,7 @@ const Tool = () => {
         }
 
         try {
-            // Make an HTTP request to your backend API endpoint
-            const response = await fetch('http://localhost:5000/submit-tool', {
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_BASE_URL}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -46,7 +44,6 @@ const Tool = () => {
             if (response.ok) {
                 console.log('Data submitted successfully:', result);
                 setSuccessMessage('Tool submitted successfully. Redirecting to Home page...');
-                // Clear input fields after successful submission
                 setProductUrl('');
                 setDescription('');
                 setTimeout(() => {
