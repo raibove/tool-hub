@@ -27,7 +27,7 @@ const Tool = () => {
         }
 
         try {
-            const response = await fetch(`${process.env.REACT_APP_BACKEND_BASE_URL}`, {
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_BASE_URL}/submit-tool`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
